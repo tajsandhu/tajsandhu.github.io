@@ -1,0 +1,16 @@
+/* 
+    grey-white: #f2f2f2
+    orange: #f96d00
+    dark grey: #393e46
+    darker grey: #222831
+*/
+
+.Main-view {
+    display: flex;
+    height: 100vh;
+    background-color: #393e46;
+}
+
+.Text {
+    color: #f2f2f2;
+}

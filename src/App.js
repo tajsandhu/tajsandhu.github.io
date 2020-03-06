@@ -1,12 +1,10 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Route, 
     Switch,
-    Redirect,
     withRouter
 } from 'react-router-dom';
-import { AppBar, Tabs, Tab } from '@material-ui/core';
+import { AppBar, Tabs, Tab, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
 
 import Home from './pages/Home';
@@ -39,35 +37,48 @@ class App extends React.Component {
     render() {
         return (
             <div className='Main-container'>
-                <AppBar position='sticky'>
-                    <Tabs value={this.tab}>
-                        <Tab label='Home' value={'home'} onClick={() => this.tabHandler('/', 'home')}/>
-                        <Tab label='Blog' value={'blog'} onClick={() => this.tabHandler('/blog', 'blog')}/>
-                        <Tab label='Projects'  value={'projects'} onClick={() => this.tabHandler('/projects', 'projects')}/>
-                        <Tab label='Resume'  value={'resume'} onClick={() => this.tabHandler('/resume', 'resume')}/>
-                        <Tab label='About'  value={'about'} onClick={() => this.tabHandler('/about', 'about')}/>
-                    </Tabs>
-                </AppBar>
-                <Switch>
-                    <Route exact path='/'>
-                        <Home />
-                    </Route>
-                    <Route path='/blog'>
-                        <Blog />
-                    </Route>
-                    <Route path='/projects'>
-                        <Projects />
-                    </Route>
-                    <Route path='/resume'>
-                        <Resume />
-                    </Route>
-                    <Route path='/about'>
-                        <About />
-                    </Route>
-                </Switch>
+                <ThemeProvider theme={main_theme}>
+                    <AppBar position='sticky' color='primary'>
+                        <Tabs value={this.tab}>
+                            <Tab label='Home' value={'home'} onClick={() => this.tabHandler('/', 'home')}/>
+                            <Tab label='Blog' value={'blog'} onClick={() => this.tabHandler('/blog', 'blog')}/>
+                            <Tab label='Projects'  value={'projects'} onClick={() => this.tabHandler('/projects', 'projects')}/>
+                            <Tab label='Resume'  value={'resume'} onClick={() => this.tabHandler('/resume', 'resume')}/>
+                            <Tab label='About'  value={'about'} onClick={() => this.tabHandler('/about', 'about')}/>
+                        </Tabs>
+                    </AppBar>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Home />
+                        </Route>
+                        <Route path='/blog'>
+                            <Blog />
+                        </Route>
+                        <Route path='/projects'>
+                            <Projects />
+                        </Route>
+                        <Route path='/resume'>
+                            <Resume />
+                        </Route>
+                        <Route path='/about'>
+                            <About />
+                        </Route>
+                    </Switch>
+                </ThemeProvider>
             </div>
         )
     }
 }
+
+const main_theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#222831',
+            light: '#393e46',
+            dark: '#f96d00',
+            contrastText: '#f2f2f2'
+        }
+    }
+});
 
 export default withRouter(App);
