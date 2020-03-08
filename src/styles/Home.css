@@ -26,7 +26,20 @@
 }
 
 .Message-box {
-    background-color: #f2f2f2;
+    background-color: #222831;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+    height: 50%;
+}
+
+.Text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.Name-field {
+    display: flex;
+    flex-direction: row;
 }
