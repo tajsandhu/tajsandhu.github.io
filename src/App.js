@@ -12,6 +12,7 @@ import Blog from './pages/Blog';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 /* 
     grey-white: #f2f2f2
@@ -45,6 +46,7 @@ class App extends React.Component {
                             <Tab label='Projects'  value={'projects'} onClick={() => this.tabHandler('/projects', 'projects')}/>
                             <Tab label='Resume'  value={'resume'} onClick={() => this.tabHandler('/resume', 'resume')}/>
                             <Tab label='About'  value={'about'} onClick={() => this.tabHandler('/about', 'about')}/>
+                            <Tab label='Contact' value={'contact'} onClick={() => this.tabHandler('/contact', 'contact')}/>
                         </Tabs>
                     </AppBar>
                     <Switch>
@@ -63,6 +65,9 @@ class App extends React.Component {
                         <Route path='/about'>
                             <About />
                         </Route>
+                        <Route path='/contact'>
+                            <Contact />
+                        </Route>
                     </Switch>
                 </ThemeProvider>
             </div>
@@ -77,7 +82,15 @@ const main_theme = createMuiTheme({
             light: '#393e46',
             dark: '#f96d00',
             contrastText: '#f2f2f2'
-        }
+        },
+
+        secondary: {
+            main: '#f96d00',
+            light: '#393e46',
+            dark: '#222831',
+            contrastText: '#f2f2f2',
+        },
+  
     }
 });
 
