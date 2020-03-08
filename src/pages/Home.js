@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Modal, TextField } from '@material-ui/core';
 import '../styles/Home.css';
-import { findByLabelText } from '@testing-library/react';
 
 class Home extends React.Component {
 
@@ -22,20 +21,32 @@ class Home extends React.Component {
             <div className='Main-view'>
                 <Modal className='Message-modal' open={this.state.backdropOpen} onBackdropClick={() => this.setState({backdropOpen: false})}>
                     <div className='Message-box'>
-                        <text>Send Message</text>
-                        <div className='Name-field'>
-                            <div className='Text-box' style={{paddingRight: 2}}>
-                                <TextField color='secondary' variant='outlined' size='small'/>
-                                <text>Full Name</text>
-                            </div>
-                            <div className='Text-box' style={{paddingLeft: 2}}>
-                                <TextField color='secondary' variant='outlined' size='small'/>
-                                <text>Last Name</text>
+                        <h1 className='Main-title'>Send Message</h1>
+                        <div className='Vertical-field'>
+                            <label className='Label-text'>Full Name</label>
+                            <div className='Horizontal-field'>
+                                <div className='Vertical-field' style={{paddingRight: 2}}>
+                                    <TextField color='secondary' variant='outlined' size='small'/>
+                                    <label className='Sub-text'>First Name</label>
+                                </div>
+                                <div className='Vertical-field' style={{paddingLeft: 2}}>
+                                    <TextField color='secondary' variant='outlined' size='small'/>
+                                    <label className='Sub-text'>Last Name</label>
+                                </div>
                             </div>
                         </div>
-                        <TextField color='secondary' variant='outlined' size='small'/>
-                        <TextField color='secondary' variant='outlined' size='small'/>
-                        <TextField color='secondary' variant='outlined' size='small' multiline={true} rows={5}/>
+                        <div className='Vertical-field'>
+                            <label className='Label-text'>Email</label>
+                            <TextField color='secondary' variant='outlined' size='small'/>
+                        </div>
+                        <div className='Vertical-field'>
+                            <label className='Label-text'>Company</label>
+                            <TextField color='secondary' variant='outlined' size='small'/>
+                        </div>
+                        <div className='Vertical-field'>
+                            <label className='Label-text'>Message</label>
+                            <TextField color='secondary' variant='outlined' size='small' multiline={true} rows={5}/>
+                        </div>
                         <Button className='Button'  color='secondary' variant='outlined' style={{alignSelf: 'center'}}>Send</Button>
                     </div>
                 </Modal>

@@ -13,7 +13,6 @@ import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import { dark } from '@material-ui/core/styles/createPalette';
 
 /* 
     grey-white: #f2f2f2

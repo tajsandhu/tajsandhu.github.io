@@ -11,11 +11,11 @@ class Resume extends React.Component {
                     <div className='School_list'>
                         <div>
                             <h3>California State University Long Beach, Long Beach, CA</h3>
-                            <text>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</text>
+                            <label>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
                         </div>
                         <div>
                             <h3>Modesto Junior College, Modesto, CA</h3>
-                            <text>Majored in Computer Science, Transferred, August 2014 - May 2017</text>
+                            <label>Majored in Computer Science, Transferred, August 2014 - May 2017</label>
                         </div>
                     </div>
                 </div>
@@ -24,12 +24,12 @@ class Resume extends React.Component {
                     <div>
                         <h3>Software Engineer Intern</h3>
                         <h4>Wellington Health Corp, Santa Clara, CA</h4>
-                        <text>June 2019 - August 2019</text>
+                        <label>June 2019 - August 2019</label>
                     </div>
                     <div>
                         <h3>IT Intern</h3>
                         <h4>City of Modesto, Modesto, CA</h4>
-                        <text>January 2017 - March 2017</text>
+                        <label>January 2017 - March 2017</label>
                     </div>
                 </div>
                 <div>

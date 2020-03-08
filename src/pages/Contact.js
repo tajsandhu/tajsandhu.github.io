@@ -7,11 +7,11 @@ class Contact extends React.Component {
                 <h1>Get In Touch With Me</h1>
                 <div>
                     <h2>Email</h2>
-                    <text>sandhu_tajbir@outlook.com</text>
+                    <label>sandhu_tajbir@outlook.com</label>
                 </div>
                 <div>
                     <h2>Phone</h2>
-                    <text>1-(209)-602-2444</text>
+                    <label>1-(209)-602-2444</label>
                 </div>
                 <div>
                     <h2>LinkedIn</h2>

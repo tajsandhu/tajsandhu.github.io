@@ -4,7 +4,7 @@ class Blog extends React.Component {
     render() {
         return(
             <div>
-                <text>Under Construction</text>
+                <label>Under Construction</label>
             </div>
         )
     }

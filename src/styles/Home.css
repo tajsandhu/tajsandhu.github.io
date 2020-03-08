@@ -31,15 +31,28 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2%;
-    height: 50%;
+    height: 60%;
 }
 
-.Text-box {
+.Horizontal-field {
+    display: flex;
+    flex-direction: row;
+}
+
+.Vertical-field {
     display: flex;
     flex-direction: column;
 }
 
-.Name-field {
-    display: flex;
-    flex-direction: row;
+.Sub-text {
+    color: #f2f2f2;
+    font-size: small;
+}
+
+.Label-text {
+    color: #f2f2f2;
+}
+
+.Main-title {
+    color: #f2f2f2;
 }
