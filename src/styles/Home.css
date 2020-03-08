@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2%;
-    height: 60%;
+    height: 50%;
 }
 
 .Horizontal-field {
@@ -42,15 +42,6 @@
 .Vertical-field {
     display: flex;
     flex-direction: column;
-}
-
-.Sub-text {
-    color: #f2f2f2;
-    font-size: small;
-}
-
-.Label-text {
-    color: #f2f2f2;
 }
 
 .Main-title {
