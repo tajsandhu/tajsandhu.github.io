@@ -1,5 +1,8 @@
 import React from 'react';
 import { Button, TextField } from '@material-ui/core';
+import * as emailjs from 'emailjs-com';
+import '../styles/Messager.css';
+import { MessageService } from '../res/config.js';
 
 class Messager extends React.Component {
     constructor(props) {
@@ -14,7 +17,22 @@ class Messager extends React.Component {
     }
 
     sendMessage = () => {
-        console.log(this.state)
+        let templateParams = {
+            first_name: this.state.firstName,
+            last_name: this.state.lastName,
+            email: this.state.email,
+            company: this.state.company,
+            message: this.state.message,
+        };
+        
+        emailjs.send(
+            MessageService.type,
+            MessageService.template,
+            templateParams,
+            MessageService.user_id,
+        )
+
+        this.props.closingFunction();
     }
 
     render() {

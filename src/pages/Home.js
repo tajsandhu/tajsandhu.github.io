@@ -16,11 +16,15 @@ class Home extends React.Component {
         this.setState({backdropOpen: true});
     }
 
+    closeMessager = () => {
+        this.setState({backdropOpen: false});
+    }
+
     render() {
         return(
             <div className='Main-view'>
                 <Modal className='Message-modal' open={this.state.backdropOpen} onBackdropClick={() => this.setState({backdropOpen: false})}>
-                    <Messager/>
+                    <Messager closingFunction={this.closeMessager}/>
                 </Modal>
                 <h1>Want To Hire Me?</h1>
                 <Button className='Button' variant='outlined' onClick={() => this.openMessager()}>
