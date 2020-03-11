@@ -9,7 +9,10 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #393e46;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../res/HomeBackground.jpg);
+    background-size: contain;
 }
 
 .Button {
@@ -20,7 +23,21 @@
 .Message-modal {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+.Contact-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 40, 49, .7);
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+
+.Main-header {
+    color: #f2f2f2;
 }
