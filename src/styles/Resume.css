@@ -5,11 +5,14 @@
     darker grey: #222831
 */
 
+
+
 .Resume_container {
     display: flex;
     flex-direction: column;
-    background-color: rgba(34, 40, 49, .7);
+    background-color: rgba(34, 40, 49, .85);
     padding: 10px;
+    padding-bottom: 50px;
 }
 
 .Category_body {
@@ -19,12 +22,14 @@
 .Category_title {
     color: #f2f2f2;
     font-size: 40px;
+    margin-left: 20%;
+    font-weight: 100;
 }
 
 .Category {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
 }
 
 .Divider {
@@ -32,18 +37,26 @@
 }
 
 .Skill_list {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .List_elements {
     color: #f2f2f2;
+    font-size: 17px;
 }
 
-.Second_level {
-    padding-left: 2em;
+.Main_title {
+    font-size: 75px;
+    color: #f2f2f2;
+    margin-left: 5%;
+    font-weight: 100;
 }
 
-.Third_level {
+.Sub_text {
     padding-left: 1em;
+}
+
+.Button {
+    align-self: center;
 }

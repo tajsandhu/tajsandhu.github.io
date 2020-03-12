@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Modal } from '@material-ui/core';
 import Messager from './Messager.js';
-import Background from '../res/HomeBackground.jpg';
 import '../styles/Home.css';
 
 class Home extends React.Component {

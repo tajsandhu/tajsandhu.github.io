@@ -1,21 +1,24 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 import '../styles/Resume.css';
 
 class Resume extends React.Component {
+
     render() {
         return(
             <div className='Resume_container'>
-                <h1>Resume</h1>
+                <h1 className='Main_title'>Resume</h1>
+                <hr className='Divider'/>
                 <div className='Category'>
                     <h2 className='Category_title'>Education</h2>
                     <div className='Category_body'>
                         <div>
                             <h3>California State University Long Beach, Long Beach, CA</h3>
-                            <label className='Third_level'>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
+                            <label className='Sub_text'>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
                         </div>
                         <div>
                             <h3>Modesto Junior College, Modesto, CA</h3>
-                            <label className='Third_level'>Majored in Computer Science, Transferred, August 2014 - May 2017</label>
+                            <label className='Sub_text'>Majored in Computer Science, Transferred, August 2014 - May 2017</label>
                         </div>
                     </div>
                 </div>
@@ -23,18 +26,21 @@ class Resume extends React.Component {
                 <div className='Category'>
                     <h2 className='Category_title'>Experience</h2>
                     <div className='Category_body'>
-                        <h3>Software Engineer Intern</h3>
-                        <h4 className='Third_level'>Wellington Health Corp, Santa Clara, CA</h4>
-                        <label className='Third_level'>June 2019 - August 2019</label>
-                    </div>
-                    <div className='Category_body'>
-                        <h3>IT Intern</h3>
-                        <h4 className='Third_level'>City of Modesto, Modesto, CA</h4>
-                        <label className='Third_level'>January 2017 - March 2017</label>
+                        <div>
+                            <h3>Software Engineer Intern</h3>
+                            <h4>Wellington Health Corp, Santa Clara, CA</h4>
+                            <label className='Sub_text'>June 2019 - August 2019</label>
+                        </div>
+                        <div>
+                            <h3>IT Intern</h3>
+                            <h4>City of Modesto, Modesto, CA</h4>
+                            <label className='Sub_text'>January 2017 - March 2017</label>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Programming Languages</h2>
+                <hr className='Divider'/>
+                <div className='Category'>
+                    <h2 className='Category_title'>Programming <br/> Languages</h2>
                     <div className='Second_level'>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
@@ -52,8 +58,9 @@ class Resume extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Frameworks and Technologies</h2>
+                <hr className='Divider'/>
+                <div className='Category'>
+                    <h2 className='Category_title'>Frameworks and <br/> Technologies</h2>
                     <div className='Second_level'>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
@@ -72,8 +79,9 @@ class Resume extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Skills</h2>
+                <hr className='Divider'/>
+                <div className='Category'>
+                    <h2 className='Category_title'>Skills</h2>
                     <div className='Second_level'>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
@@ -91,6 +99,10 @@ class Resume extends React.Component {
                         </div>
                     </div>
                 </div>
+                <hr className='Divider'/>
+                <Button className='Button' color='secondary' variant='outlined' href='Tajbir_Sandhu_Resume.pdf' download>
+                    Want A Copy?
+                </Button>
             </div>
         )
     }
