@@ -39,7 +39,7 @@ class App extends React.Component {
         return (
             <div className='Main-container'>
                 <ThemeProvider theme={main_theme}>
-                    <AppBar position='sticky' color='primary'>
+                    <AppBar position='fixed' color='primary'>
                         <Tabs value={this.tab}>
                             <Tab label='Home' value={'home'} onClick={() => this.tabHandler('/', 'home')}/>
                             <Tab label='Blog' value={'blog'} onClick={() => this.tabHandler('/blog', 'blog')}/>

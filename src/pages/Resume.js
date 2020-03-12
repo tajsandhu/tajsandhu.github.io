@@ -6,82 +6,89 @@ class Resume extends React.Component {
         return(
             <div className='Resume_container'>
                 <h1>Resume</h1>
-                <div>
-                    <h2>Education</h2>
-                    <div className='School_list'>
+                <div className='Category'>
+                    <h2 className='Category_title'>Education</h2>
+                    <div className='Category_body'>
                         <div>
                             <h3>California State University Long Beach, Long Beach, CA</h3>
-                            <label>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
+                            <label className='Third_level'>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
                         </div>
                         <div>
                             <h3>Modesto Junior College, Modesto, CA</h3>
-                            <label>Majored in Computer Science, Transferred, August 2014 - May 2017</label>
+                            <label className='Third_level'>Majored in Computer Science, Transferred, August 2014 - May 2017</label>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Experience</h2>
-                    <div>
+                <hr className='Divider'/>
+                <div className='Category'>
+                    <h2 className='Category_title'>Experience</h2>
+                    <div className='Category_body'>
                         <h3>Software Engineer Intern</h3>
-                        <h4>Wellington Health Corp, Santa Clara, CA</h4>
-                        <label>June 2019 - August 2019</label>
+                        <h4 className='Third_level'>Wellington Health Corp, Santa Clara, CA</h4>
+                        <label className='Third_level'>June 2019 - August 2019</label>
                     </div>
-                    <div>
+                    <div className='Category_body'>
                         <h3>IT Intern</h3>
-                        <h4>City of Modesto, Modesto, CA</h4>
-                        <label>January 2017 - March 2017</label>
+                        <h4 className='Third_level'>City of Modesto, Modesto, CA</h4>
+                        <label className='Third_level'>January 2017 - March 2017</label>
                     </div>
                 </div>
                 <div>
                     <h2>Programming Languages</h2>
-                    <div className='Skill_list'>
-                        <ul className='List_elements'>
-                            <li>C/C++</li>
-                            <li>Java</li>
-                            <li>C#</li>
-                            <li>Python</li>
-                        </ul>
-                        <ul className='List_elements'>
-                            <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>SQL</li>
-                        </ul>
+                    <div className='Second_level'>
+                        <div className='Skill_list'>
+                            <ul className='List_elements'>
+                                <li>C/C++</li>
+                                <li>Java</li>
+                                <li>C#</li>
+                                <li>Python</li>
+                            </ul>
+                            <ul className='List_elements'>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <h2>Frameworks and Technologies</h2>
-                    <div className='Skill_list'>
-                        <ul className='List_elements'>
-                            <li>ReactJS</li>
-                            <li>React Native</li>
-                            <li>Android Studio</li>
-                            <li>Git</li>
-                            <li>Amazon Web Services</li>
-                        </ul>
-                        <ul className='List_elements'>
-                            <li>Google Cloud Platform</li>
-                            <li>.NET</li>
-                            <li>Node.JS</li>
-                            <li>Postman</li>
-                        </ul>
+                    <div className='Second_level'>
+                        <div className='Skill_list'>
+                            <ul className='List_elements'>
+                                <li>ReactJS</li>
+                                <li>React Native</li>
+                                <li>Android Studio</li>
+                                <li>Git</li>
+                                <li>Amazon Web Services</li>
+                            </ul>
+                            <ul className='List_elements'>
+                                <li>Google Cloud Platform</li>
+                                <li>.NET</li>
+                                <li>Node.JS</li>
+                                <li>Postman</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <h2>Skills</h2>
-                    <div className='Skill_list'>
-                        <ul className='List_elements'>
-                            <li>Algorithms</li>
-                            <li>Relational Algebra</li>
-                            <li>Agile Process</li>
-                            <li>Scrum</li>
-                        </ul>
-                        <ul className='List_elements'>
-                            <li>Object Oriented Programming</li>
-                            <li>Communication</li>
-                            <li>Problem Solving</li>
-                            <li>Teamwork</li>
-                        </ul>
+                    <div className='Second_level'>
+                        <div className='Skill_list'>
+                            <ul className='List_elements'>
+                                <li>Algorithms</li>
+                                <li>Relational Algebra</li>
+                                <li>Agile Process</li>
+                                <li>Scrum</li>
+                            </ul>
+                            <ul className='List_elements'>
+                                <li>Object Oriented Programming</li>
+                                <li>Communication</li>
+                                <li>Problem Solving</li>
+                                <li>Teamwork</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
