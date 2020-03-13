@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/Contact.css';
+
 class Contact extends React.Component {
     
     componentDidMount = () => {
@@ -8,23 +10,23 @@ class Contact extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Get In Touch With Me</h1>
-                <div>
-                    <h2>Email</h2>
-                    <label>sandhu_tajbir@outlook.com</label>
+            <div className='Contact_container'>
+                <h1 className='Contact_title'>Contact Me</h1>
+                <div className='Contact_form'>
+                    <h2 className='Contact_form_title'>Email</h2>
+                    <label className='Contact'>sandhu_tajbir@outlook.com</label>
                 </div>
-                <div>
-                    <h2>Phone</h2>
-                    <label>1-(209)-602-2444</label>
+                <div className='Contact_form'>
+                    <h2 className='Contact_form_title'>Phone</h2>
+                    <label className='Contact'>1-(209)-602-2444</label>
                 </div>
-                <div>
-                    <h2>LinkedIn</h2>
-                    <a href='https://www.linkedin.com/in/tajbirsandhu/'>www.linkedin.com/in/tajbirsandhu</a>
+                <div className='Contact_form'>
+                    <h2 className='Contact_form_title'>LinkedIn</h2>
+                    <a className='Contact' href='https://www.linkedin.com/in/tajbirsandhu/'>www.linkedin.com/in/tajbirsandhu</a>
                 </div>
-                <div>
-                    <h2>GitHub</h2>
-                    <a href='https://github.com/SandManTaj'>github.com/SandManTaj</a>
+                <div className='Contact_form'>
+                    <h2 className='Contact_form_title'>GitHub</h2>
+                    <a className='Contact' href='https://github.com/SandManTaj'>github.com/SandManTaj</a>
                 </div>
             </div>
         )
