@@ -15,18 +15,21 @@
     padding-bottom: 50px;
 }
 
-.Category_body {
-    color: #f2f2f2;
+
+.Resume_title {
+    font-size: 75px;
+    margin-left: 5%;
 }
 
-.Category_title {
-    color: #f2f2f2;
+.Resume_category_body {
+}
+
+.Resume_category_title {
     font-size: 40px;
     margin-left: 20%;
-    font-weight: 100;
 }
 
-.Category {
+.Resume_category {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
@@ -42,21 +45,5 @@
 }
 
 .List_elements {
-    color: #f2f2f2;
     font-size: 17px;
-}
-
-.Main_title {
-    font-size: 75px;
-    color: #f2f2f2;
-    margin-left: 5%;
-    font-weight: 100;
-}
-
-.Sub_text {
-    padding-left: 1em;
-}
-
-.Button {
-    align-self: center;
 }

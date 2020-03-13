@@ -7,11 +7,11 @@ class Resume extends React.Component {
     render() {
         return(
             <div className='Resume_container'>
-                <h1 className='Main_title'>Resume</h1>
+                <h1 className='Resume_title'>Resume</h1>
                 <hr className='Divider'/>
-                <div className='Category'>
-                    <h2 className='Category_title'>Education</h2>
-                    <div className='Category_body'>
+                <div className='Resume_category'>
+                    <h2 className='Resume_category_title'>Education</h2>
+                    <div className='Resume_category_body'>
                         <div>
                             <h3>California State University Long Beach, Long Beach, CA</h3>
                             <label className='Sub_text'>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
@@ -23,9 +23,9 @@ class Resume extends React.Component {
                     </div>
                 </div>
                 <hr className='Divider'/>
-                <div className='Category'>
-                    <h2 className='Category_title'>Experience</h2>
-                    <div className='Category_body'>
+                <div className='Resume_category'>
+                    <h2 className='Resume_category_title'>Experience</h2>
+                    <div className='Resume_category_body'>
                         <div>
                             <h3>Software Engineer Intern</h3>
                             <h4>Wellington Health Corp, Santa Clara, CA</h4>
@@ -39,9 +39,9 @@ class Resume extends React.Component {
                     </div>
                 </div>
                 <hr className='Divider'/>
-                <div className='Category'>
-                    <h2 className='Category_title'>Programming <br/> Languages</h2>
-                    <div className='Second_level'>
+                <div className='Resume_category'>
+                    <h2 className='Resume_category_title'>Programming <br/> Languages</h2>
+                    <div>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
                                 <li>C/C++</li>
@@ -59,9 +59,9 @@ class Resume extends React.Component {
                     </div>
                 </div>
                 <hr className='Divider'/>
-                <div className='Category'>
-                    <h2 className='Category_title'>Frameworks and <br/> Technologies</h2>
-                    <div className='Second_level'>
+                <div className='Resume_category'>
+                    <h2 className='Resume_category_title'>Frameworks and <br/> Technologies</h2>
+                    <div>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
                                 <li>ReactJS</li>
@@ -80,8 +80,8 @@ class Resume extends React.Component {
                     </div>
                 </div>
                 <hr className='Divider'/>
-                <div className='Category'>
-                    <h2 className='Category_title'>Skills</h2>
+                <div className='Resume_category'>
+                    <h2 className='Resume_category_title'>Skills</h2>
                     <div className='Second_level'>
                         <div className='Skill_list'>
                             <ul className='List_elements'>
@@ -100,7 +100,7 @@ class Resume extends React.Component {
                     </div>
                 </div>
                 <hr className='Divider'/>
-                <Button className='Button' color='secondary' variant='outlined' href='Tajbir_Sandhu_Resume.pdf' download>
+                <Button className='Button' color='secondary' variant='outlined' size='large' href='Tajbir_Sandhu_Resume.pdf' download>
                     Want A Copy?
                 </Button>
             </div>

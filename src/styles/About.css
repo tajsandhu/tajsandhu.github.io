@@ -1,0 +1,24 @@
+
+.About_container {
+    background-color: rgba(34, 40, 49, .85);
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.About_title {
+    font-size: 75px;
+}
+
+.About_category_title {
+    font-size: 45px;
+}
+
+.About_paragraph {
+    font-size: 25px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: 300;
+    text-indent: 3%;
+    line-height: 40px;
+}
