@@ -16,7 +16,9 @@ class Messager extends React.Component {
         }
     }
 
+    //uses EmailJS to directly send me messages
     sendMessage = () => {
+        //creates a template consistant with the custom template created with EmailJS
         let templateParams = {
             first_name: this.state.firstName,
             last_name: this.state.lastName,
@@ -25,6 +27,8 @@ class Messager extends React.Component {
             message: this.state.message,
         };
         
+        //Sends the message to one of my email address
+        /* TODO: implement error handling */
         emailjs.send(
             MessageService.type,
             MessageService.template,

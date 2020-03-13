@@ -1,6 +1,11 @@
 import React from 'react';
 
 class Contact extends React.Component {
+    
+    componentDidMount = () => {
+        this.props.updateTab('contact');
+    }
+
     render() {
         return (
             <div>

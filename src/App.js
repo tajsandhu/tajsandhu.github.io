@@ -26,13 +26,12 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            currentTab: 'home',
         }
-        this.tab = 'home';
     }
 
-    tabHandler = (route, tab) => {
-        this.tab = tab;
-        this.props.history.push(route);
+    updateTab = (tab) => {
+        this.setState({currentTab: tab});
     }
 
     render() {
@@ -40,33 +39,33 @@ class App extends React.Component {
             <div className='Main-container'>
                 <ThemeProvider theme={main_theme}>
                     <AppBar position='fixed' color='primary'>
-                        <Tabs value={this.tab}>
-                            <Tab label='Home' value={'home'} onClick={() => this.tabHandler('/', 'home')}/>
-                            <Tab label='Blog' value={'blog'} onClick={() => this.tabHandler('/blog', 'blog')}/>
-                            <Tab label='Projects'  value={'projects'} onClick={() => this.tabHandler('/projects', 'projects')}/>
-                            <Tab label='Resume'  value={'resume'} onClick={() => this.tabHandler('/resume', 'resume')}/>
-                            <Tab label='About'  value={'about'} onClick={() => this.tabHandler('/about', 'about')}/>
-                            <Tab label='Contact' value={'contact'} onClick={() => this.tabHandler('/contact', 'contact')}/>
+                        <Tabs value={this.state.currentTab}>
+                            <Tab label='Home' value={'home'} onClick={() => this.props.history.push('/')}/>
+                            <Tab label='Blog' value={'blog'} onClick={() => this.props.history.push('/blog')}/>
+                            <Tab label='Projects'  value={'projects'} onClick={() => this.props.history.push('/projects')}/>
+                            <Tab label='Resume'  value={'resume'} onClick={() => this.props.history.push('/resume')}/>
+                            <Tab label='About'  value={'about'} onClick={() => this.props.history.push('/about')}/>
+                            <Tab label='Contact' value={'contact'} onClick={() => this.props.history.push('/contact')}/>
                         </Tabs>
                     </AppBar>
                     <Switch>
                         <Route exact path='/'>
-                            <Home />
+                            <Home updateTab={this.updateTab}/>
                         </Route>
                         <Route path='/blog'>
-                            <Blog />
+                            <Blog updateTab={this.updateTab}/>
                         </Route>
                         <Route path='/projects'>
-                            <Projects />
+                            <Projects updateTab={this.updateTab}/>
                         </Route>
                         <Route path='/resume'>
-                            <Resume />
+                            <Resume updateTab={this.updateTab}/>
                         </Route>
                         <Route path='/about'>
-                            <About />
+                            <About updateTab={this.updateTab}/>
                         </Route>
                         <Route path='/contact'>
-                            <Contact />
+                            <Contact updateTab={this.updateTab}/>
                         </Route>
                     </Switch>
                 </ThemeProvider>

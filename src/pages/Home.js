@@ -11,6 +11,10 @@ class Home extends React.Component {
             backdropOpen: false,
         };
     }
+
+    componentDidMount = () => {
+        this.props.updateTab('home');
+    }
     
     openMessager = () => {
         this.setState({backdropOpen: true});

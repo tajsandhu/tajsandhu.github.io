@@ -4,6 +4,10 @@ import '../styles/Resume.css';
 
 class Resume extends React.Component {
 
+    componentDidMount = () => {
+        this.props.updateTab('resume');
+    }
+
     render() {
         return(
             <div className='Resume_container'>

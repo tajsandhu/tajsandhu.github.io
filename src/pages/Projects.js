@@ -1,6 +1,11 @@
 import React from 'react';
 
 class Project extends React.Component {
+
+    componentDidMount = () => {
+        this.props.updateTab('projects');
+    }
+    
     render() {
         return(
             <div>

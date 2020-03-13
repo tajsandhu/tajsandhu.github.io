@@ -2,6 +2,10 @@ import React from 'react';
 import '../styles/About.css';
 
 class About extends React.Component {
+
+    componentDidMount = () => {
+        this.props.updateTab('about');
+    }
     render() {
         return(
             <div className='About_container'>
