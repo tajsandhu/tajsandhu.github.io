@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Project.css'
 
 class Project extends React.Component {
 
@@ -8,10 +9,10 @@ class Project extends React.Component {
     
     render() {
         return(
-            <div>
-                <h1>Projects</h1>
+            <div className='Project_container'>
+                <h1 className='Project_main_title'>Projects</h1>
                 <div>
-                    <h2>Web Apps</h2>
+                    <h2 className='Project_group_title'>Web Apps</h2>
                     <div>
                         <h3>Personal Website</h3>
                         <a href='https://github.com/SandManTaj/Personal-Website'>Source Code</a>
@@ -22,7 +23,7 @@ class Project extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <h2>Mobile Apps</h2>
+                    <h2 className='Project_group_title'>Mobile Apps</h2>
                     <div>
                         <h3>CrossCam</h3>
                         <a href='https://github.com/SandManTaj/CrossCam'>Source Code</a>

@@ -41,7 +41,6 @@ class App extends React.Component {
                     <AppBar position='fixed' color='primary'>
                         <Tabs value={this.state.currentTab}>
                             <Tab label='Home' value={'home'} onClick={() => this.props.history.push('/')}/>
-                            <Tab label='Blog' value={'blog'} onClick={() => this.props.history.push('/blog')}/>
                             <Tab label='Projects'  value={'projects'} onClick={() => this.props.history.push('/projects')}/>
                             <Tab label='Resume'  value={'resume'} onClick={() => this.props.history.push('/resume')}/>
                             <Tab label='About'  value={'about'} onClick={() => this.props.history.push('/about')}/>

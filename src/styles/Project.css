@@ -1,0 +1,14 @@
+.Project_container {
+    background-color: rgba(34, 40, 49, .85);
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.Project_main_title {
+    font-size: 75px;
+}
+
+.Project_group_title {
+    font-size: 45px;
+}
