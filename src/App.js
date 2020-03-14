@@ -2,7 +2,8 @@ import React from 'react';
 import {
     Route, 
     Switch,
-    withRouter
+    withRouter,
+    Redirect
 } from 'react-router-dom';
 import { AppBar, Tabs, Tab, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
@@ -66,6 +67,7 @@ class App extends React.Component {
                         <Route path='/contact'>
                             <Contact updateTab={this.updateTab}/>
                         </Route>
+                        <Redirect from='/Personal-Website' to='/'/>
                     </Switch>
                 </ThemeProvider>
             </div>
