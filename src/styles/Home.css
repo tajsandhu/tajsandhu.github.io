@@ -5,12 +5,17 @@
     darker grey: #222831
 */
 
-.Main-view {
+.Home-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    align-items: center;
-    justify-content: center;
+    background-color: rgba(34, 40, 49, .85);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.Home-title {
+    font-size: 35px;
 }
 
 .Button {
@@ -26,15 +31,17 @@
 }
 
 .Contact-view {
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: rgba(34, 40, 49, .85);
+    align-self: center;
     padding-left: 1%;
     padding-right: 1%;
     padding-bottom: 1%;
+    border: 2px solid #f96d00;
 }
+
 
 .Main-header {
     color: #f2f2f2;
