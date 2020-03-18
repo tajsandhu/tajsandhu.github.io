@@ -12,3 +12,12 @@
 .Project_group_title {
     font-size: 45px;
 }
+
+.Project_link {
+    color: #f2f2f2;
+    font-weight: 300;
+}
+
+.Project_divider {
+    color: #f2f2f2;
+}

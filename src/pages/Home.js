@@ -27,7 +27,6 @@ class Home extends React.Component {
     render() {
         return(
             <div className='Main-view'>
-                <div className='Background-image'></div>
                 <Modal className='Message-modal' open={this.state.backdropOpen} onBackdropClick={() => this.setState({backdropOpen: false})}>
                     <Messager closingFunction={this.closeMessager}/>
                 </Modal>
