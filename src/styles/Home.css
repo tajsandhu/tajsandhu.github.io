@@ -8,6 +8,7 @@
 .Home-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: 100vh;
     background-color: rgba(34, 40, 49, .85);
     padding-left: 5%;
@@ -15,12 +16,14 @@
 }
 
 .Home-title {
-    font-size: 35px;
+    font-size: 55px;
+    align-self: center;
 }
 
 .Button {
     width: fit-content;
     height: fit-content;
+    align-self: center;
 }
 
 .Message-modal {
@@ -42,6 +45,19 @@
     border: 2px solid #f96d00;
 }
 
+.Home-greeting {
+    width: 60%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Home-description {
+    color: #f2f2f2;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+}
 
 .Main-header {
     color: #f2f2f2;

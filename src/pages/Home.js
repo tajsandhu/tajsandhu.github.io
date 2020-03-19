@@ -30,11 +30,10 @@ class Home extends React.Component {
                 <Modal className='Message-modal' open={this.state.backdropOpen} onBackdropClick={() => this.setState({backdropOpen: false})}>
                     <Messager closingFunction={this.closeMessager}/>
                 </Modal>
-                <h1 className='Home-title'>Tajbir Sandhu</h1>
-                <p>A flexible Software Engineer who spends his time learning new technologies and watching sports with friends.</p>
-                <div className='Contact-view'>
-                    <h1 className='Main-header'>Want To Get In Touch?</h1>
-                    <Button className='Button' variant='outlined' onClick={() => this.openMessager()}>
+                <div className='Home-greeting'>
+                    <h1 className='Home-title'>Tajbir Sandhu</h1>
+                    <p className='Home-description'>A flexible Software Engineer who spends his time learning new technologies and watching sports with friends. I am currently working on a number of personal projects including desktop, mobile, and web apps. Have any questions?</p>
+                    <Button className='Button' color='secondary' variant='outlined' onClick={() => this.openMessager()}>
                         Contact Me Today
                     </Button>
                 </div>

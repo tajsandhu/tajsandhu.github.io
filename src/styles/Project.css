@@ -3,6 +3,7 @@
     min-height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 5%;
 }
 
 .Project_main_title {
@@ -16,8 +17,40 @@
 .Project_link {
     color: #f2f2f2;
     font-weight: 300;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .Project_divider {
     color: #f2f2f2;
+}
+
+.Small_divider {
+    color: #f2f2f2;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.Project {
+    display: flex;
+    flex-direction: column;
+}
+
+.Site_image {
+    max-width: 80%;
+    border: 2px #f96d00 solid;
+    align-self: center;
+}
+
+.Mobile_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Mobile_image {
+    width: 20%;
+    border: 2px #f96d00 solid;
 }

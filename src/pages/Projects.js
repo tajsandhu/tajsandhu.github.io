@@ -1,5 +1,9 @@
 import React from 'react';
-import '../styles/Project.css'
+import '../styles/Project.css';
+import PersonalWebsite from '../res/personal-website-cap.png';
+import CrossCamLogin from '../res/CrossCam-login.png';
+import CrossCamCamera from '../res/CrossCam-camera.png';
+import CrossCamGallery from '../res/CrossCam-gallery.png';
 
 class Project extends React.Component {
 
@@ -14,21 +18,25 @@ class Project extends React.Component {
                 <div>
                     <h2 className='Project_group_title'>Web Apps</h2>
                     <hr className='Project_Divider'/>
-                    <div>
-                        <h3>Personal Website</h3>
-                        <a className='Project_link' href='https://github.com/SandManTaj/SandManTaj.github.io'>Source Code</a>
+                    <div className='Project'>
+                        <a className='Project_link' href='https://github.com/SandManTaj/SandManTaj.github.io'>Personal Website</a>
+                        <img className='Site_image' src={PersonalWebsite}/>
                     </div>
-                    <div>
-                        <h3>uMove Web App</h3>
-                        <a className='Project_link' href='https://github.com/SandManTaj/uMove-Client'>Source Code</a>
+                    <hr className='Small_divider'/>
+                    <div className='Project'>
+                        <a className='Project_link' href='https://github.com/SandManTaj/uMove-Client'>uMove WebApp</a>
                     </div>
                 </div>
                 <div>
                     <h2 className='Project_group_title'>Mobile Apps</h2>
                     <hr className='Project_Divider'/>
-                    <div>
-                        <h3>CrossCam</h3>
-                        <a className='Project_link' href='https://github.com/SandManTaj/CrossCam'>Source Code</a>
+                    <div className='Project'>
+                        <a className='Project_link' href='https://github.com/SandManTaj/CrossCam'>CrossCam</a>
+                        <div className='Mobile_images'>
+                            <img className='Mobile_image' src={CrossCamLogin}/>
+                            <img className='Mobile_image' src={CrossCamCamera}/>
+                            <img className='Mobile_image' src={CrossCamGallery}/>
+                        </div>
                     </div>
                 </div>
             </div>
