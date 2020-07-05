@@ -17,6 +17,10 @@ class Resume extends React.Component {
                     <h2 className='Resume_category_title'>Education</h2>
                     <div className='Resume_category_body'>
                         <div>
+                            <h3>San Jose State University, San Jose, CA</h3>
+                            <label className='Sub_text'>Masters of Software Engineering, Begins August 2020</label>
+                        </div>
+                        <div>
                             <h3>California State University Long Beach, Long Beach, CA</h3>
                             <label className='Sub_text'>Achieved Bachelor of Science in Computer Science, August 2017 - December 2019</label>
                         </div>
@@ -32,8 +36,8 @@ class Resume extends React.Component {
                     <div className='Resume_category_body'>
                         <div>
                             <h3>Software Engineer Intern</h3>
-                            <h4>Wellington Health Corp, Santa Clara, CA</h4>
-                            <label className='Sub_text'>June 2019 - August 2019</label>
+                            <h4>XSETTE Data Protection</h4>
+                            <label className='Sub_text'>April 2020 - Present</label>
                         </div>
                         <div>
                             <h3>IT Intern</h3>
@@ -70,15 +74,14 @@ class Resume extends React.Component {
                             <ul className='List_elements'>
                                 <li>ReactJS</li>
                                 <li>React Native</li>
-                                <li>Android Studio</li>
                                 <li>Git</li>
                                 <li>Amazon Web Services</li>
                             </ul>
                             <ul className='List_elements'>
-                                <li>Google Cloud Platform</li>
                                 <li>.NET</li>
                                 <li>Node.JS</li>
                                 <li>Postman</li>
+                                <li>Boost Libraries</li>
                             </ul>
                         </div>
                     </div>
@@ -103,10 +106,6 @@ class Resume extends React.Component {
                         </div>
                     </div>
                 </div>
-                <hr className='Divider'/>
-                <Button className='Button' color='secondary' variant='outlined' size='large' href='Tajbir_Sandhu_Resume.pdf' download>
-                    Want A Copy?
-                </Button>
             </div>
         )
     }
