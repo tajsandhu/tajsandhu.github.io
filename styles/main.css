@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: "Baskerville Old Face";
+}
+
+nav {
+    background-color: #0F0F0F;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#home-section { 
+    color: white;
+    background: url("/res/circuit-board-2182863.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#home-section img{
+    vertical-align: top;
+    width: 100%;
+    opacity: 0%;
+}
+
+
+#nav-tabs {
+
+}
