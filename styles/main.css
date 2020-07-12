@@ -7,7 +7,12 @@ body {
 }
 
 h1 {
-    font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 nav {
@@ -17,13 +22,21 @@ nav {
     top: 0;
     width: 100%;
     height: 10%;
+    z-index: 2;
 }
 
-#menu-button div {
-    width: 35px;
-    height: 5px;
-    background-color: grey;
-    margin: 6px 6px;
+
+
+#menu-button {
+    z-index: 0;
+}
+
+#mobile-navigation {
+    top: 7%;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    visibility: hidden;
 }
 
 nav #desktop-navigation {
@@ -40,19 +53,32 @@ nav #desktop-navigation li {
 }
 
 nav #desktop-navigation li a {
+
     color: white;
     text-decoration: none;
 }
 
 #home-section { 
     color: white;
+    display: flex;
     width: 100%;
-    height: 500px;
+    height: fit-content;
     background-image: url("/res/circuit-board-2182863.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-top: 10%;
+}
+
+#home-section h2 {
+    align-self: center;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 25px;
+}
+
+#home-section h2 span {
+    font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
 }
 
 #menu-button {
@@ -68,7 +94,18 @@ nav #desktop-navigation li a {
     color: white;
 }
 
+#home-section img{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0%;
+}
+
 @media only screen and (min-width: 601px) {
+    nav {
+        height: 50px;
+    }
+
     nav #desktop-navigation {
         visibility: visible;
     }
@@ -83,17 +120,12 @@ nav #desktop-navigation li a {
         background-repeat: no-repeat;
         background-size: 100%;
     }
-}
 
-
-
-#home-section img{
-    vertical-align: top;
-    width: 100%;
-    opacity: 0%;
-}
-
-
-#nav-tabs {
-
+    #home-section h2 {
+        align-self: center;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        font-size: 50px;
+    }
 }
