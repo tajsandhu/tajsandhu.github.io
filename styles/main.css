@@ -14,6 +14,7 @@ h1 {
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    margin-top: 0px;
 }
 
 nav {
@@ -151,6 +152,27 @@ h1 span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+#skill-list ul {
+    margin: 0px;
+    justify-content: space-evenly;
+}
+
+#contact-section {
+    padding-bottom: 50px;
+}
+
+#contact-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 @media only screen and (min-width: 601px) {
