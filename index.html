@@ -12,19 +12,19 @@
     </head>
     <body>
         <header>
-            <nav role="navigation">
-                <button id="menu-button" onclick="showMobileMenu()">
-                    <i class="material-icons" id="menu-icon">menu</i>
-                </button> 
+            <nav>
                 <ul id="desktop-navigation">
                     <li><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
                     <li><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
                     <li><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
                     <li><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
                 </ul>
+                <button class="icon-button" onclick="showMobileMenu()">
+                    <i class="material-icons" id="menu-icon">menu</i>
+                </button>
             </nav>
         </header>
-        <section id="mobile-navigation">
+        <section id="mobile-nav-menu">
             <ul>
                 <li><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
                 <li><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
@@ -33,12 +33,11 @@
             </ul>
         </section>
         <section id="home-section">
-                <h2 id="home-header">Hi I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
-            <img id="home-image" src="/res/silver-and-black-laptop-computer-1229861.jpg" />
+            <h2 id="home-header">Hi I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
         </section>
         <section id="info-section">
             <section id="resume-section">
-                <div id="section-header">
+                <div class="section-header">
                     <h1><span>Resume</span></h1>
                 </div>
                 <section class="">
@@ -60,6 +59,7 @@
                         <div>2017-2019</div>
                     </div>
                 </section>
+                <hr/>
                 <section>
                     <h2>Experience</h2>
                     <div class="horizontal-section">
@@ -77,6 +77,7 @@
                         </div>
                     </div>
                 </section>
+                <hr/>
                 <section>
                     <div>
                         <h2>Skills</h2>
@@ -100,7 +101,7 @@
                 </section>
             </section>
             <section id="about-section">
-                <div id="section-header">
+                <div class="section-header">
                     <h1><span>About</span></h1>
                 </div>
                 <img alt="Picture of Tajbir Sandhu"/>
@@ -116,7 +117,7 @@
                 </p>
             </section>
             <section id="contact-section">
-                <div id="section-header">
+                <div class="section-header">
                     <h1><span>Contact</span></h1>
                 </div>
                 <div>
@@ -130,11 +131,11 @@
                     </div>
                     <div class="contact">
                         <label for="linkedin-link">LinkedIn</label>
-                        <a href="https://www.linkedin.com/in/tajbirsandhu/" id="linkedin-link" aria-label="linkedin link">www.linkedin.com/in/tajbirsandhu</a>
+                        <a href="https://www.linkedin.com/in/tajbirsandhu/" id="linkedin-link" aria-label="linkedin link">linkedin.com/in/tajbirsandhu</a>
                     </div>
                     <div class="contact">
                         <label for="github-link">GitHub</label>
-                        <a href="https://github.com/SandManTaj" id="github-link" aria-label="github link">https://github.com/SandManTaj</a>
+                        <a href="https://github.com/SandManTaj" id="github-link" aria-label="github link">github.com/SandManTaj</a>
                     </div>
                 </div>
             </section>

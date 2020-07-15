@@ -4,6 +4,7 @@
 
 body {
     font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+    font-size: 5vw;
 }
 
 h1 {
@@ -18,83 +19,97 @@ h2 {
 }
 
 nav {
+    background-color: black;
     display: flex;
-    background-color: #0F0F0F;
+    flex-direction: row;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10%;
     z-index: 2;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+#desktop-navigation {  
+    visibility: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+#desktop-navigation li {
+    display: inline-block;
+}
+
+#desktop-navigation li a {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.icon-button {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
 
 #menu-button {
-    z-index: 0;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
 
-#mobile-navigation {
-    top: 10%;
+#mobile-nav-menu {
+    top: 5vh;
     background-color: #f2f2f2;
     position: fixed;
+    right: 0;
     z-index: 1;
     visibility: hidden;
     list-style: none;
     height: 100%;
+    font-size: 6vw;
 }
 
-#mobile-navigation  ul{
+#mobile-nav-menu  ul{
     list-style: none;
     list-style-position: inside;
     margin:0;
     padding:0;
     padding-top: 20px;
+    text-align: right;
 }
 
-#mobile-navigation ul li {
-    padding-left: 20px;
-    padding-right: 80px;
+#mobile-nav-menu ul li {
+    padding-right: 4vw;
+    padding-left: 15vw;
     padding-bottom: 15px;
 }
 
-#mobile-navigation ul li a {
+#mobile-nav-menu ul li a {
     text-decoration: none;
     color: #2e2e2e;
 }
 
-nav #desktop-navigation {
-    visibility: hidden;
-}
-nav #desktop-navigation {
-    list-style: none;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-nav #desktop-navigation li {
-    display: inline-block;
-}
-
-nav #desktop-navigation li a {
-
-    color: white;
-    text-decoration: none;
-}
-
 #home-section { 
-    color: white;
     display: flex;
     flex-direction: column;
+    color: white;
     width: 100%;
-    height: fit-content;
+    height: 110vh;
     background-image: url("/res/circuit-board-2182863.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
 }
 
 #home-section h2 {
-    align-self: center;
-    position: absolute;
-    top: 40%;
     left: 5%;
     font-size: 7.5vw;
 }
@@ -103,24 +118,8 @@ nav #desktop-navigation li a {
     font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
 }
 
-#menu-button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-}
-
 #menu-icon {
     color: white;
-}
-
-#home-section img{
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    opacity: 0%;
 }
 
 #info-section {
@@ -128,7 +127,26 @@ nav #desktop-navigation li a {
     padding-right: 5%;
 }
 
-#section-header {
+hr { 
+    padding: 0;
+    border: none; 
+    border-top: 2px solid #B45036; 
+    color: #000; 
+    text-align: center; 
+    width: 80%;
+} 
+
+hr:before {  
+    content: "§"; 
+    display: inline-block; 
+    position: relative; 
+    top: -0.7em; 
+    font-size: 1.25em; 
+    padding: 0 0.25em; 
+    background: #fff; 
+}
+
+.section-header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -185,29 +203,26 @@ h1 span {
 }
 
 @media only screen and (min-width: 601px) {
-    nav {
-        height: 50px;
+    body {
+        font-size: 2.5vh;
     }
 
-    nav #desktop-navigation {
+    #desktop-navigation {
         visibility: visible;
     }
 
-    #menu-button {
+    .icon-button {
         visibility: hidden;
     }
 
     #home-section { 
         color: white;
-        background: url("/res/silver-and-black-laptop-computer-1229861.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
+        background-image: url("/res/silver-and-black-laptop-computer-1229861.jpg");
     }
 
     #home-section h2 {
         align-self: center;
         position: absolute;
-        top: 40%;
         left: 5%;
         font-size: 3.5vw;
     }
