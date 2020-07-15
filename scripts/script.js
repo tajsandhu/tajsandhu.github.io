@@ -1,6 +1,7 @@
 function changeHomeImage() {
     if (width.matches) {
         document.getElementById("home-image").src = "/res/silver-and-black-laptop-computer-1229861.jpg";
+        document.getElementById("mobile-navigation").style.visibility = "hidden";
     } else {
         document.getElementById("home-image").src = "/res/circuit-board-2182863.jpg";
     }
