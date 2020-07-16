@@ -220,7 +220,54 @@ hr:before {
     font-size: 22px;
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (orientation: landscape) {
+    body {
+        font-size: 3vw;
+    }
+
+    #desktop-navigation {
+        font-size: 30px;
+        padding: 0px;
+        margin: 1vh;
+        margin-left: 5vw;
+        visibility: visible;
+    }
+
+    #desktop-navigation li {
+        margin-right: 2.5vw;
+    }
+
+    .icon-button {
+        visibility: hidden;
+        padding: 0;
+    }
+
+    .info-section {
+        max-width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #home-section { 
+        color: white;
+        background-image: url("/pictures/silver-and-black-laptop-computer-1229861.jpg");
+        background-position: center;
+    }
+
+    #home-section h2 {
+        align-self: center;
+        position: absolute;
+        left: 5%;
+        font-size: 3.5vw;
+    }
+
+    .contact {
+        margin-bottom: 5vh;
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (min-width: 768px) {
     body {
         display: flex;
         flex-direction: column;
