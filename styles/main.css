@@ -33,8 +33,7 @@ nav {
 #desktop-navigation {  
     visibility: hidden;
     list-style-type: none;
-    padding: 0;
-    margin: 10px;
+    font-size: 0;
 }
 
 #desktop-navigation li {
@@ -48,12 +47,19 @@ nav {
 }
 
 .icon-button {
+    display: flex;
     background-color: transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    padding: 2vw;
+}
+
+.icon-button i {
+    align-items: center;
+    justify-content: center;
 }
 
 #menu-button {
@@ -122,7 +128,7 @@ nav {
     color: white;
 }
 
-#info-section {
+.info-section {
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -204,20 +210,37 @@ h1 span {
 
 @media only screen and (min-width: 601px) {
     body {
-        font-size: 2.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .info-section {
+        font-size: min(2vw, 32px);
+        min-width: 40%;
+        max-width: 60%;
     }
 
     #desktop-navigation {
+        font-size: 24px;
+        padding: 0px;
+        margin: 1vh;
         visibility: visible;
     }
 
     .icon-button {
         visibility: hidden;
+        padding: 0;
     }
 
     #home-section { 
         color: white;
         background-image: url("/res/silver-and-black-laptop-computer-1229861.jpg");
+        background-position: center;
     }
 
     #home-section h2 {
@@ -225,5 +248,19 @@ h1 span {
         position: absolute;
         left: 5%;
         font-size: 3.5vw;
+    }
+
+    #skill-list {
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    h1 {
+        font-size: min(5.5vw, 64px);
+    }
+
+    h2 {
+        font-size: min(4vw, 54px);
     }
 }
