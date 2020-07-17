@@ -4,7 +4,6 @@
 
 body {
     font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
-    font-size: 5vw;
 }
 
 h1 {
@@ -129,7 +128,6 @@ nav {
 #home-section h2 {
     left: 5%;
     font-size: 7.5vw;
-    line-height: 12vw;
 }
 
 #home-section h2 span {
