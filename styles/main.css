@@ -129,6 +129,7 @@ nav {
 #home-section h2 {
     left: 5%;
     font-size: 7.5vw;
+    line-height: 12vw;
 }
 
 #home-section h2 span {
@@ -176,6 +177,7 @@ hr:before {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 25px;
+    line-height: 8vw;
 }
 
 .right-aligned {
@@ -191,6 +193,7 @@ hr:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 10vw;
 }
 
 #about-section img {
@@ -202,6 +205,7 @@ hr:before {
 
 #contact-section {
     padding-bottom: 50px;
+    line-height: 8vw;
 }
 
 #contact-section div {
@@ -259,10 +263,20 @@ hr:before {
         position: absolute;
         left: 5%;
         font-size: 3.5vw;
+        line-height: 6vw;
+    }
+
+    .horizontal-section {
+        line-height: 5vw;
+    }
+
+    #about-section {
+        line-height: 6vw;
     }
 
     .contact {
         margin-bottom: 5vh;
+        line-height: 4vw;
         align-items: flex-end;
     }
 }
@@ -322,10 +336,18 @@ hr:before {
         font-size: 3.5vw;
     }
 
+    .horizontal-section {
+        line-height: 4vw;
+    }
+
     #skill-list {
         display: flex;
         width: 90%;
         margin-left: 5%;
+    }
+
+    #about-section {
+        line-height: 3.5vw;
     }
 
     #about-section, #contact-section {
@@ -339,7 +361,15 @@ hr:before {
         border-radius: 50%;
     }
 
+    #contact-section {
+        line-height: 2vw;
+    }
+
     #contact-section label {
         font-size: 2vw;
+    }
+
+    .contact {
+       line-height: 2vw;
     }
 }
