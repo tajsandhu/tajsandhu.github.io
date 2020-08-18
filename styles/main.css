@@ -1,380 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-    font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+.site {
+    display: block;
+}
+
+/***Site Header***/
+.site-header {
+    background: black;
+    position: fixed;
     width: 100%;
-    text-align: center;
-    border-bottom: 2px solid #B45036;
-    line-height: 0.0em;
-    padding-top: 20px;
+    top: 0;
 }
 
-h1 span {
-    background: #fff;
-    padding: 0 10px;
+/***Default navigation style***/
+.navigation-tabs {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 5px auto;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.navigation-tab {
+    display: inline-block;
+    padding-right: 15px;
 } 
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    margin-top: 0px;
-}
-
-nav {
-    background-color: #141414;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    justify-content: space-between;
-    font-size: 25px;
-}
-
-p {
-    text-justify: inter-word;
-}
-
-#desktop-navigation {  
-    visibility: hidden;
-    list-style-type: none;
-    font-size: 0;
-}
-
-#desktop-navigation li {
-    display: inline-block;
-}
-
-#desktop-navigation li a {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+.navigation-tab a {
     text-decoration: none;
-}
-
-.icon-button {
-    display: flex;
-    background-color: transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    padding: 2vw;
-}
-
-.icon-button i {
-    align-items: center;
-    justify-content: center;
-    font-size: 5vh;
-}
-
-#menu-button {
-    background-color: transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-}
-
-#mobile-nav-menu {
-    top: 5vh;
-    background-color: #f2f2f2;
-    position: fixed;
-    right: 0;
-    z-index: 1;
-    visibility: hidden;
-    list-style: none;
-    height: 100%;
-    font-size: 6vw;
-}
-
-#mobile-nav-menu  ul{
-    list-style: none;
-    list-style-position: inside;
-    margin:0;
-    padding:0;
-    padding-top: 20px;
-    text-align: right;
-}
-
-#mobile-nav-menu ul li {
-    padding-right: 4vw;
-    padding-left: 15vw;
-    padding-bottom: 15px;
-}
-
-#mobile-nav-menu ul li a {
-    text-decoration: none;
-    color: #2e2e2e;
-}
-
-#home-section { 
-    display: flex;
-    flex-direction: column;
     color: white;
-    width: 100%;
-    height: 110vh;
-    background-image: url("/pictures/circuit-board-2182863.jpg");
+}
+
+.navigation-tab a:hover {
+    text-decoration: underline;
+}
+
+/***Content section***/
+.content-wrapper {
+    padding-top: 23px;
+}
+
+#home-section {
+    display: inherit;
+    color: white;
+    background: url("../pictures/circuit-board-2182863.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
+    height: 600px;
 }
 
 #home-section h2 {
-    left: 5%;
-    font-size: 7.5vw;
+    padding-top: 250px;
+    margin-left: 25px;
 }
 
-#home-section h2 span {
-    font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+.content-section {
+    padding: 5%;
 }
 
-#menu-icon {
-    color: white;
-}
-
-.info-section {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-hr { 
-    padding: 0;
-    border: none; 
-    border-top: 2px solid #B45036; 
-    color: #000; 
-    text-align: center; 
-    width: 80%;
-} 
-
-hr:before {  
-    content: "§"; 
-    display: inline-block; 
-    position: relative; 
-    top: -0.7em; 
-    font-size: 1.25em; 
-    padding: 0 0.25em; 
-    background: #fff; 
-}
-
-.section-header {
+/***Education and Skills***/
+.experience-listing {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    margin: 5%;
 }
 
-.horizontal-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    line-height: 8vw;
+.experience-listing div {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.left-aligned {
+    text-align: left;
 }
 
 .right-aligned {
     text-align: right;
 }
 
-#skill-list ul {
-    margin: 0px;
-    justify-content: space-evenly;
-}
-
-#about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 10vw;
-}
-
-#about-section img {
+.skill-list {
     width: 100%;
-    max-width: 40vw;
-    border:1px solid #B45036;
-    border-radius: 50%;
+    margin: 0 5%
 }
 
-#contact-section {
-    padding-bottom: 50px;
-    line-height: 8vw;
+.skill-list ul {
+    display: inline-block;
+    width: 35%;
 }
 
-#contact-section div {
-    display: flex;
-    flex-direction: column;
-
+/***About Section***/
+#about-section p {
+    margin: 5%;
 }
 
+/***Contact Section***/
 .contact {
-    margin-bottom: min(3vh, 25px);
-    align-items: flex-end;
+    margin: 20px 0;
+    text-align: right;
 }
 
 .contact label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-}
-
-@media only screen and (orientation: landscape) {
-    body {
-        font-size: 3vw;
-    }
-
-    #desktop-navigation {
-        font-size: 30px;
-        padding: 0px;
-        margin: 1vh;
-        margin-left: 5vw;
-        visibility: visible;
-    }
-
-    #desktop-navigation li {
-        margin-right: 2.5vw;
-    }
-
-    .icon-button {
-        visibility: hidden;
-        padding: 0;
-    }
-
-    .info-section {
-        max-width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    
-    #home-section { 
-        color: white;
-        background-image: url("/pictures/silver-and-black-laptop-computer-1229861.jpg");
-        background-position: center;
-    }
-
-    #home-section h2 {
-        align-self: center;
-        position: absolute;
-        left: 5%;
-        font-size: 3.5vw;
-        line-height: 6vw;
-    }
-
-    .horizontal-section {
-        line-height: 5vw;
-    }
-
-    #about-section {
-        line-height: 6vw;
-    }
-
-    .contact {
-        margin-bottom: 5vh;
-        line-height: 4vw;
-        align-items: flex-end;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: min(5.5vw, 64px);
-    }
-
-    h2 {
-        font-size: min(4vw, 54px);
-    }
-
-    .info-section {
-        font-size: min(2vw, 32px);
-        min-width: 40%;
-        max-width: 60%;
-    }
-
-    #desktop-navigation {
-        font-size: 30px;
-        padding: 0px;
-        margin: 1vh;
-        margin-left: 5vw;
-        visibility: visible;
-    }
-
-    #desktop-navigation li {
-        margin-right: 2.5vw;
-    }
-
-    .icon-button {
-        visibility: hidden;
-        padding: 0;
-    }
-
-    #home-section { 
-        color: white;
-        background-image: url("/pictures/silver-and-black-laptop-computer-1229861.jpg");
-        background-position: center;
-    }
-
-    #home-section h2 {
-        align-self: center;
-        position: absolute;
-        left: 5%;
-        font-size: 3.5vw;
-    }
-
-    .horizontal-section {
-        line-height: 2;
-        font-size: max(1.5vw, 24px);
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    #skill-list {
-        display: flex;
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    #about-section {
-        line-height: 3.5vw;
-    }
-
-    #about-section, #contact-section {
-        font-size: min(2vw, 24px);
-    }
-
-    #about-section img {
-        width: 100%;
-        max-width: 15vw;
-        border:1px solid #B45036;
-        border-radius: 50%;
-    }
-
-    #contact-section {
-        line-height: 2vw;
-    }
-
-    #contact-section label {
-        font-size: 2vw;
-    }
-
-    .contact {
-       line-height: 2vw;
-    }
+    display: block;
 }

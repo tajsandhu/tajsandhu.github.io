@@ -10,67 +10,56 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="scripts/script.js"></script>
     </head>
-    <body>
-        <header>
+    <body class="site">
+        <header class="site-header">
             <nav>
-                <ul id="desktop-navigation">
-                    <li><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
-                    <li><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
-                    <li><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
-                    <li><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
+                <ul class="navigation-tabs">
+                    <li class="navigation-tab"><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
+                    <li class="navigation-tab"><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
+                    <li class="navigation-tab"><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
+                    <li class="navigation-tab"><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
                 </ul>
-                <button class="icon-button" onclick="showMobileMenu()">
-                    <i class="material-icons" id="menu-icon">menu</i>
-                </button>
             </nav>
         </header>
-        <section id="mobile-nav-menu">
-            <ul>
-                <li onclick="showMobileMenu()"><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
-                <li onclick="showMobileMenu()"><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
-                <li onclick="showMobileMenu()"><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
-                <li onclick="showMobileMenu()"><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
-            </ul>
-        </section>
-        <section id="home-section">
-            <h2 id="home-header">Hi I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
-        </section>
-        <section class="info-section">
-            <section id="resume-section">
+        <div class="content-wrapper">
+            <section id="home-section">
+                <h2 id="home-header">Hi I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
+            </section>
+            <section id="resume-section" class="content-section">
                 <div class="section-header">
                     <h1><span>Resume</span></h1>
                 </div>
-                <section class="">
-                    <h2 class="left-justified">Education</h2>
-                    <div class="horizontal-section">
-                        <div>
+                <section>
+                    <h2>Education</h2>
+                    <div class="experience-listing">
+                        <div class="left-aligned">
                             San Jose State<br>
                             San Jose, CA<br>
                             MS Software Engineering
                         </div>
-                        <div>2020-</div>
+                        <div class="right-aligned">08/2020-Present</div>
                     </div>
-                    <div class="horizontal-section">
-                        <div>
+                    <div class="experience-listing">
+                        <div class="left-aligned">
                             CSU Long Beach<br>
                             Long Beach, CA<br>
                             BS Computer Science
                         </div>
-                        <div>2017-2019</div>
+                        <div class="right-aligned">08/2017-12/2019</div>
                     </div>
                 </section>
                 <hr/>
                 <section>
                     <h2>Experience</h2>
-                    <div class="horizontal-section">
-                        <div>2020-</div>
+                    <div class="experience-listing">
+                        <div class="left-aligned">04/2020-Present</div>
                         <div class="right-aligned">
                             Developer Intern<br>
                             XSETTE Data Protection
                         </div>
                     </div>
-                    <div class="horizontal-section">
-                        <div>2017</div>
+                    <div class="experience-listing">
+                        <div class="left-aligned">01/2017-03/2017</div>
                         <div class="right-aligned">
                             IT Intern<br>
                             City of Modesto
@@ -81,7 +70,7 @@
                 <section>
                     <div>
                         <h2>Skills</h2>
-                        <div class="horizontal-section" id="skill-list">
+                        <div class="skill-list">
                             <ul>
                                 <li>C/C++</li>
                                 <li>C#</li>
@@ -100,11 +89,13 @@
                     </div>
                 </section>
             </section>
-            <section id="about-section">
-                <div class="section-header">
+            <section id="about-section" class="content-section">
+                <div>
                     <h1><span>About</span></h1>
                 </div>
+                <!--
                 <img alt="Picture of Tajbir Sandhu" src="/pictures/ProfilePic.jpg"/>
+                -->
                 <p>
                     Hi, I'm Tajbir, I'm a Software Engineer. Problem solving and 
                     technology have always been passions of mine, so programming 
@@ -117,14 +108,14 @@
                     guitar, and watch sports.
                 </p>
             </section>
-            <section id="contact-section">
-                <div class="section-header">
+            <section id="contact-section" class="content-section">
+                <div>
                     <h1><span>Contact</span></h1>
                 </div>
                 <div>
                     <div class="contact">
-                    	<label for="email-address">Email</label>
-                    	<a href="mailto: sandhu_tajbir@outlook.com" id="email-address" aria-label="email link">sandhu_tajbir@outlook.com</a>
+                        <label for="email-address">Email</label>
+                        <a href="mailto: sandhu_tajbir@outlook.com" id="email-address" aria-label="email link">sandhu_tajbir@outlook.com</a>
                     </div>
                     <div class="contact">
                         <label for="phone-number">Phone</label>
@@ -140,6 +131,6 @@
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
     </body>
 </html>
