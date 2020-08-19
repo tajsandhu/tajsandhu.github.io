@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@supports(display: grid) {
+    h1 {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+
+    .site {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "content sidebar";
+        grid-template-columns: 100% 60%;
+        font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+    }
+
+    .site-header {
+        grid-area: header;
+        background-color: black;
+        height: 45px;
+    }
+
+    .site-header nav {
+        display: none;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home-section {
+        background-image: url("/pictures/circuit-board-2182863.jpg");
+        background-size: cover;
+        display: inherit;
+        align-items: center;
+        height: 700px;
+        font-size: 18px;
+        color: white;
+        padding: 0 25px;
+    }
+
+    .content-section {
+        padding: 0 25px;
+    }
+
+    .experience-listing {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+
+    .left-aligned {
+        text-align: left;
+    }
+
+    .right-aligned {
+        text-align: right;
+    }
+
+    .skill-list ul {
+        padding: 0 auto;
+        margin: 0 auto ;
+    }
+
+    .contact {
+        margin: 15px 0;
+    }
+
+    .contact label {
+        display: block;
+    }
+}

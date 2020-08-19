@@ -1,0 +1,189 @@
+@supports not (display: grid) {
+
+    h1, h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .site {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
+    /***Site Header***/
+    .site-header {
+        background: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    /***Default navigation style***/
+    .navigation-tabs {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        margin: 5px auto;
+        white-space: nowrap;
+        overflow: scroll;
+    }
+
+    .navigation-tab {
+        display: inline-block;
+        padding-right: 15px;
+    } 
+
+    .navigation-tab a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navigation-tab a:hover {
+        text-decoration: underline;
+    }
+
+    /***Content section***/
+    .content-wrapper {
+        padding-top: 23px;
+    }
+
+    #home-section {
+        display: inherit;
+        color: white;
+        background: url("../pictures/circuit-board-2182863.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+
+    #home-section h2 {
+        padding-top: 250px;
+        margin-left: 25px;
+    }
+
+    .content-section {
+        padding: 5%;
+    }
+
+    /***Education and Skills***/
+    .experience-listing {
+        width: 100%;
+        margin: 5%;
+    }
+
+    .experience-listing div {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+    }
+
+    .left-aligned {
+        text-align: left;
+    }
+
+    .right-aligned {
+        text-align: right;
+    }
+
+    .skill-list {
+        width: 100%;
+        margin: 0 5%;
+    }
+
+    .skill-list ul {
+        display: inline-block;
+        width: 35%;
+    }
+    /***About Section***/
+    img {
+        margin: auto 25%;
+        width: 50%;
+        border-radius: 50%;
+    }
+
+    #about-section p {
+        margin: 5%;
+    }
+
+    /***Contact Section***/
+    .contact {
+        margin: 20px 0;
+        text-align: right;
+    }
+
+    .contact label {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        body {
+            font-size: min(2.75vw, 30px);
+        }
+
+        h1 {
+            font-size: 55px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+
+        .navigation-tabs {
+            overflow: hidden;
+        }
+
+        .content-wrapper {
+            padding-top: 0;
+        }
+        
+        #home-section {
+            background: url("../pictures/silver-and-black-laptop-computer-1229861.jpg");
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: left;
+            background-size: cover;
+            height: 1000px;
+        }
+        
+        #home-section h2 {
+            margin-left: 75px;
+            font-size: 40px;
+            padding-top: 400px;
+        }
+        .content-section {
+            width: 60%;
+            margin: auto 15%;
+            padding: 5%;
+        }
+
+        
+        .skill-list {
+            width: 100%;
+            margin: 0 5%;
+        }
+
+        .skill-list ul {
+            display: inline-block;
+            width: 35%;
+        }
+
+        img {
+            width: 50%;
+            margin: auto 25%;
+        }
+    }
+
+    @media screen and (min-width: 770px) {
+        img {
+            width: 30%;
+            margin: auto 35%;
+        }
+    }
+
+}
