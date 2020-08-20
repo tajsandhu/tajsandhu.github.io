@@ -13,18 +13,25 @@
         font-weight: 400;
     }
 
+    body {
+        overflow: hidden;
+    }
+
     .site {
         display: grid;
         grid-template-areas: 
             "header header"
-            "content sidebar";
-        grid-template-columns: 100% 60%;
+            "main sidebar";
+        grid-template-columns: 100% 300px;
         font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+        height: 100vh;
+        position: relative;
     }
 
     .site-header {
         grid-area: header;
         background-color: black;
+        width: 100%;
         height: 45px;
     }
 
@@ -32,24 +39,35 @@
         display: none;
     }
 
+    #mobile-menu-button {
+        display: flex;
+        height: 45px;
+        align-items: center;
+        background: transparent;
+        border: none;
+        color: white;
+        position: fixed;
+        right: 0;
+    }
+
     .sidebar {
         grid-area: sidebar;
     }
 
     .content-wrapper {
-        display: flex;
-        flex-direction: column;
+        grid-area: main;
+        overflow-y: scroll;
     }
 
     #home-section {
         background-image: url("/pictures/circuit-board-2182863.jpg");
         background-size: cover;
-        display: inherit;
+        display: flex;
         align-items: center;
         height: 700px;
         font-size: 18px;
         color: white;
-        padding: 0 25px;
+        padding: 25px;
     }
 
     .content-section {

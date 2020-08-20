@@ -1,8 +1,11 @@
-function showMobileMenu() {
-    var showMenu = document.getElementById("mobile-nav-menu");
-    if (showMenu.style.visibility == "visible") {
-        showMenu.style.visibility = "hidden";
+var menuButton = document.body.querySelector("#mobile-menu-button");
+var siteCanvas = document.body.querySelector(".site");
+
+
+menuButton.addEventListener("click", () => {
+    if (siteCanvas.style.left != "-250px") {
+        siteCanvas.style.left = "-250px";
     } else {
-        showMenu.style.visibility = "visible";
+        siteCanvas.style.left = "0";
     }
-}
+});
