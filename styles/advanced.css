@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @supports(display: grid) {
+    
     h1 {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 500;
@@ -16,19 +17,23 @@
     body {
         width: 100vw;
         overflow: hidden;
+        line-height: 1.5;
     }
 
-    .site {
-        display: grid;
-        grid-template-areas: 
-            "header header"
-            "main sidebar";
-        grid-template-columns: 100% 250px;
-        font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
-        height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-        left: 0;
+    @media screen and (max-width: 599px)
+    {
+        .site {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "main sidebar";
+            grid-template-columns: 100% 250px;
+            font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+            height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            left: 0;
+        }
     }
 
     .reveal-menu {
@@ -63,6 +68,21 @@
 
     .sidebar {
         grid-area: sidebar;
+        background-color: #111111;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar .navigation-tab {
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+    .sidebar .navigation-tab a{
+        text-decoration: none;
+        color: white;
     }
 
     .content-wrapper {
@@ -88,7 +108,7 @@
     .experience-listing {
         display: flex;
         justify-content: space-between;
-        padding: 5px 0;
+        padding: 10px 0;
     }
 
     .left-aligned {
@@ -104,11 +124,73 @@
         margin: 0 auto ;
     }
 
+    #contact-section {
+        margin-bottom: 50px;
+    }
+
     .contact {
         margin: 15px 0;
     }
 
     .contact label {
         display: block;
+    }
+
+    @media screen and (min-width: 600px) {
+        body {
+            overflow: initial;
+        }
+
+        .site {
+            display: grid;
+            grid-template-areas: 
+                "left main right";
+            grid-template-columns: 1fr max(800px, 60%) 1fr;
+            font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+        }
+
+        .sidebar {
+            display: none;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-header nav {
+            display: initial;
+        }
+
+        .site-header nav ul {
+            margin: 0;
+        }
+
+        .site-header .navigation-tab {
+            display: inline;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+
+        .site-header .navigation-tab a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .site-header .navigation-tab a:hover {
+            text-decoration: underline;
+        }
+
+        .mobile-menu-button {
+            display: none;
+        }
+        
+        .content-wrapper {
+            grid-area: main;
+            overflow: auto;
+        }
     }
 }
