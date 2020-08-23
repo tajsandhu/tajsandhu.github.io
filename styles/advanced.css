@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+
+
 @supports(display: grid) {
     
     h1 {
@@ -23,7 +25,7 @@
         padding: 0;
         border: none; 
         border-top: 2px solid #B45036; 
-        color: #000; 
+        color: #141414; 
         text-align: center; 
         width: 80%;
     } 
@@ -49,7 +51,7 @@
         line-height: 1.5;
     }
 
-    @media screen and (max-width: 599px)
+    @media screen and (max-width: 614px)
     {
         .site {
             display: grid;
@@ -98,6 +100,7 @@
     .sidebar {
         grid-area: sidebar;
         background-color: #111111;
+        box-shadow: inset 0 0 10px #000;
     }
 
     .sidebar ul {
@@ -171,7 +174,7 @@
         display: block;
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 615px) {
         body {
             overflow: initial;
             font-size: 20px;
@@ -190,6 +193,7 @@
             top: 0;
             display: flex;
             align-items: center;
+            z-index: 5;
         }
 
         .site-header nav {
@@ -228,7 +232,7 @@
                 "left resume right"
                 "left about right"
                 "left contacts right";
-            grid-template-columns: 1fr max(700px, 50%) 1fr;
+            grid-template-columns: 1fr max(500px, 50%) 1fr;
             font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
         }
 

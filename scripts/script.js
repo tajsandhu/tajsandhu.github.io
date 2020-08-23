@@ -7,12 +7,17 @@ menuButton.classList.remove("shift-button");
 menuButton.addEventListener("click", () => {
     siteCanvas.style.transition = "left .7s ease";
     menuButton.style.transition = "right .7s ease";
-    if (siteCanvas.classList.contains("reveal-menu") == true) {    
+    if (siteCanvas.classList.contains("reveal-menu") == true) {  
+        let completed = true;  
         menuButton.classList.remove("shift-button");
         siteCanvas.classList.remove("reveal-menu");
-        setTimeout(() => {
-            siteCanvas.style.overflowX = "hidden";
-        }, 700);
+        siteCanvas.ontransitioncancel = () => {
+            completed = false;
+        };
+        siteCanvas.ontransitionend = () => {
+            if (completed == true)
+                siteCanvas.style.overflowX = "hidden";
+        }
     } else {
         siteCanvas.style.overflowX = "initial";
         siteCanvas.classList.add("reveal-menu");
