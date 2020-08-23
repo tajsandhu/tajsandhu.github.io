@@ -7,6 +7,35 @@
     h1 {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 500;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #B45036;
+        line-height: 0.0em;
+        padding-top: 20px;
+    }
+    
+    h1 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    hr { 
+        padding: 0;
+        border: none; 
+        border-top: 2px solid #B45036; 
+        color: #000; 
+        text-align: center; 
+        width: 80%;
+    } 
+    
+    hr:before {  
+        content: "§"; 
+        display: inline-block; 
+        position: relative; 
+        top: -0.7em; 
+        font-size: 1.25em; 
+        padding: 0 0.25em; 
+        background: #fff; 
     }
 
     h2 {
@@ -15,7 +44,7 @@
     }
 
     body {
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
         line-height: 1.5;
     }
@@ -34,10 +63,10 @@
             overflow-x: hidden;
             left: 0;
         }
-    }
 
-    .reveal-menu {
-        left: -250px;
+        .reveal-menu {
+            left: -250px;
+        }
     }
 
     .site-header {
@@ -124,6 +153,12 @@
         margin: 0 auto ;
     }
 
+    .profile-pic {
+        width: 45%;
+        margin: auto 27.5%;
+        border-radius: 50%;
+    }
+
     #contact-section {
         margin-bottom: 50px;
     }
@@ -139,14 +174,11 @@
     @media screen and (min-width: 600px) {
         body {
             overflow: initial;
+            font-size: 20px;
         }
 
         .site {
-            display: grid;
-            grid-template-areas: 
-                "left main right";
-            grid-template-columns: 1fr max(800px, 60%) 1fr;
-            font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+            display: inline-block;
         }
 
         .sidebar {
@@ -189,8 +221,47 @@
         }
         
         .content-wrapper {
-            grid-area: main;
             overflow: auto;
+            display: grid;
+            grid-template-areas: 
+                "home home home"
+                "left resume right"
+                "left about right"
+                "left contacts right";
+            grid-template-columns: 1fr max(700px, 50%) 1fr;
+            font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+        }
+
+        #home-section {
+            grid-area: home;
+            height: 95vh;
+            align-items: center flex-end;
+            background-image: url("/pictures/silver-and-black-laptop-computer-opt.jpg");
+            background-position: center left;
+            font-size: 32px;
+        }
+
+        #resume-section {
+            grid-area: resume;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #about-section {
+            grid-area: about;
+        }
+
+        .profile-pic {
+            width: 30%;
+            margin: auto 35%;
+            border-radius: 50%;
+        }
+
+        #contact-section {
+            grid-area: contacts;
         }
     }
 }
