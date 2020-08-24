@@ -1,0 +1,229 @@
+/* styling for older browsers */
+
+@supports not (display: grid) {
+
+    h1, h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    h1 {
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #B45036;
+        line-height: 0.0em;
+        padding-top: 20px;
+    }
+
+    h1 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+    
+    h1 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    hr { 
+        padding: 0;
+        border: none; 
+        border-top: 2px solid #B45036; 
+        color: #000; 
+        text-align: center; 
+        width: 80%;
+    } 
+    
+    hr:before {  
+        content: "§"; 
+        display: inline-block; 
+        position: relative; 
+        top: -0.7em; 
+        font-size: 1.25em; 
+        padding: 0 0.25em; 
+        background: #fff; 
+    }
+
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 17px;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .site {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
+    /* Site Header */
+    .site-header {
+        background: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    /* Default navigation style */
+    .navigation-tabs {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        margin: 5px auto;
+        white-space: nowrap;
+        overflow: scroll;
+    }
+
+    .navigation-tab {
+        display: inline-block;
+        padding-right: 15px;
+    } 
+
+    .navigation-tab a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navigation-tab a:hover {
+        text-decoration: underline;
+    }
+
+    /* Content section */
+    .content-wrapper {
+        padding-top: 23px;
+    }
+
+    #home-section {
+        display: inherit;
+        color: white;
+        background: url("../pictures/circuit-board-opt.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+
+    #home-section h2 {
+        padding-top: 250px;
+        margin-left: 25px;
+    }
+
+    .content-section {
+        padding: 5%;
+    }
+
+    /* Education and Skills */
+    .experience-listing {
+        width: 100%;
+        margin: 5%;
+    }
+
+    .experience-listing div {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+    }
+
+    .left-aligned {
+        text-align: left;
+    }
+
+    .right-aligned {
+        text-align: right;
+    }
+
+    .skill-list {
+        width: 100%;
+        margin: 0 5%;
+    }
+
+    .skill-list ul {
+        display: inline-block;
+        width: 35%;
+    }
+    /* About Section */
+    img {
+        margin: auto 25%;
+        width: 50%;
+        border-radius: 50%;
+    }
+
+    #about-section p {
+        margin: 5%;
+    }
+
+    /* Contact Section */
+    .contact {
+        margin: 20px 0;
+        text-align: right;
+    }
+
+    .contact label {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+        body {
+            font-size: 22px;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: lighter;
+        }
+
+        .navigation-tabs {
+            overflow: hidden;
+        }
+
+        /* sets up main content section of large screen app */
+
+        .content-wrapper {
+            padding-top: 0;
+        }
+        
+        #home-section {
+            background: url("../pictures/silver-and-black-laptop-computer-opt.jpg");
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: left;
+            background-size: cover;
+            height: 1000px;
+        }
+        
+        #home-section h2 {
+            margin-left: 75px;
+            font-size: 40px;
+            padding-top: 400px;
+        }
+        .content-section {
+            width: 50%;
+            margin: auto 20%;
+            padding: 5%;
+        }
+
+        
+        .skill-list {
+            width: 100%;
+            margin: 0 5%;
+        }
+
+        .skill-list ul {
+            display: inline-block;
+            width: 35%;
+        }
+
+        img {
+            width: 50%;
+            margin: auto 25%;
+        }
+    }
+
+}

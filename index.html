@@ -6,140 +6,142 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="The personal website of Software Engineer Tajbir Sandhu">
         <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
-        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/advanced.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script src="scripts/script.js"></script>
+        <link rel="shortcut icon" href="#" />
+        <script src="scripts/script.js" defer></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul id="desktop-navigation">
-                    <li><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
-                    <li><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
-                    <li><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
-                    <li><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
+        <div class="site">
+            <header class="site-header">
+                <nav>
+                    <ul class="navigation-tabs">
+                        <li class="navigation-tab"><a href="#home-section" data-message="Link to home section">Home</a></li>
+                        <li class="navigation-tab"><a href="#resume-section" data-message="Link to resume section">Resume</a></li>
+                        <li class="navigation-tab"><a href="#about-section" data-message="Link to about section">About</a></li>
+                        <li class="navigation-tab"><a href="#contact-section" data-message="Link to contact section">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-button shift-button">Menu<i class="material-icons">menu</i></button>
+            </header>  
+            <nav class="sidebar">
+                <ul>
+                    <li class="navigation-tab"><a href="#home-section" data-message="Link to home section">Home</a></li>
+                    <li class="navigation-tab"><a href="#resume-section" data-message="Link to resume section">Resume</a></li>
+                    <li class="navigation-tab"><a href="#about-section" data-message="Link to about section">About</a></li>
+                    <li class="navigation-tab"><a href="#contact-section" data-message="Link to contact section">Contact</a></li>
                 </ul>
-                <button class="icon-button" onclick="showMobileMenu()">
-                    <i class="material-icons" id="menu-icon">menu</i>
-                </button>
             </nav>
-        </header>
-        <section id="mobile-nav-menu">
-            <ul>
-                <li onclick="showMobileMenu()"><a href="#home-section" role="tab" data-message="Link to home section">Home</a></li>
-                <li onclick="showMobileMenu()"><a href="#resume-section" role="tab" data-message="Link to resume section">Resume</a></li>
-                <li onclick="showMobileMenu()"><a href="#about-section" role="tab" data-message="Link to about section">About</a></li>
-                <li onclick="showMobileMenu()"><a href="#contact-section" role="tab" data-message="Link to contact section">Contact</a></li>
-            </ul>
-        </section>
-        <section id="home-section">
-            <h2 id="home-header">Hi, I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
-        </section>
-        <section class="info-section">
-            <section id="resume-section">
-                <div class="section-header">
-                    <h1><span>Resume</span></h1>
-                </div>
-                <section class="">
-                    <h2 class="left-justified">Education</h2>
-                    <div class="horizontal-section">
-                        <div>
-                            San Jose State<br>
-                            San Jose, CA<br>
-                            MS Software Engineering
-                        </div>
-                        <div>2020-</div>
-                    </div>
-                    <div class="horizontal-section">
-                        <div>
-                            CSU Long Beach<br>
-                            Long Beach, CA<br>
-                            BS Computer Science
-                        </div>
-                        <div>2017-2019</div>
-                    </div>
+            <div class="content-wrapper">  
+                <section id="home-section">
+                    <h2 id="home-header">Hi I'm<br><span>Tajbir Sandhu</span><br>I'm a Software Engineer</h2>
                 </section>
-                <hr/>
-                <section>
-                    <h2>Experience</h2>
-                    <div class="horizontal-section">
-                        <div>2020-</div>
-                        <div class="right-aligned">
-                            Developer Intern<br>
-                            XSETTE Data Protection
-                        </div>
+                <section id="resume-section" class="content-section">
+                    <div class="section-header">
+                        <h1><span>Resume</span></h1>
                     </div>
-                    <div class="horizontal-section">
-                        <div>2017</div>
-                        <div class="right-aligned">
-                            IT Intern<br>
-                            City of Modesto
+                    <section>
+                        <h2>Education</h2>
+                        <div class="experience-listing">
+                            <div class="left-aligned">
+                                San Jose State<br>
+                                San Jose, CA<br>
+                                MS Software Engineering
+                            </div>
+                            <div class="right-aligned">08/2020-Present</div>
                         </div>
-                    </div>
+                        <div class="experience-listing">
+                            <div class="left-aligned">
+                                CSU Long Beach<br>
+                                Long Beach, CA<br>
+                                BS Computer Science
+                            </div>
+                            <div class="right-aligned">08/2017-12/2019</div>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section>
+                        <h2>Experience</h2>
+                        <div class="experience-listing">
+                            <div class="left-aligned">04/2020-Present</div>
+                            <div class="right-aligned">
+                                Developer Intern<br>
+                                XSETTE Data Protection
+                            </div>
+                        </div>
+                        <div class="experience-listing">
+                            <div class="left-aligned">01/2017-03/2017</div>
+                            <div class="right-aligned">
+                                IT Intern<br>
+                                City of Modesto
+                            </div>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section>
+                        <div>
+                            <h2>Skills</h2>
+                            <div class="skill-list">
+                                <ul>
+                                    <li>C/C++</li>
+                                    <li>C#</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>ReactJS</li>
+                                    <li>.NET Core</li>
+                                    <li>JQuery</li>
+                                    <li>Boost</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </section>
-                <hr/>
-                <section>
+                <section id="about-section" class="content-section">
                     <div>
-                        <h2>Skills</h2>
-                        <div class="horizontal-section" id="skill-list">
-                            <ul>
-                                <li>C/C++</li>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                            <ul>
-                                <li>Python</li>
-                                <li>ReactJS</li>
-                                <li>.NET Core</li>
-                                <li>JQuery</li>
-                                <li>Boost</li>
-                            </ul>
+                        <h1><span>About</span></h1>
+                    </div>
+                    <img class="profile-pic" alt="Picture of Tajbir Sandhu" src="/pictures/ProfilePic-opt.jpg"/>
+                    <p>
+                        Hi, I'm Tajbir, I'm a Software Engineer. Problem solving and 
+                        technology have always been passions of mine, so programming 
+                        was a clear choice for me. I enjoy learning and always look 
+                        forward to new challenges, and pride myself in being a creative, 
+                        hard working, and social person.
+                        <br><br>
+                        I also believe that a well balanced life is worth striving
+                        for. In my spare time, I like to work out, go on hikes, play 
+                        guitar, and watch sports.
+                    </p>
+                </section>
+                <section id="contact-section" class="content-section">
+                    <div>
+                        <h1><span>Contact</span></h1>
+                    </div>
+                    <div>
+                        <div class="contact">
+                            <label for="email-address">Email</label>
+                            <a href="mailto: sandhu_tajbir@outlook.com" id="email-address" aria-label="email link">sandhu_tajbir@outlook.com</a>
+                        </div>
+                        <div class="contact">
+                            <label for="phone-number">Phone</label>
+                            <a href="tel:+1-209-602-2444" id="phone-number" aria-label="phone link">209-602-2444</a>
+                        </div>
+                        <div class="contact">
+                            <label for="linkedin-link">LinkedIn</label>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/tajbirsandhu/" id="linkedin-link" aria-label="linkedin link">linkedin.com/in/tajbirsandhu</a>
+                        </div>
+                        <div class="contact">
+                            <label for="github-link">GitHub</label>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/tajsandhu" id="github-link" aria-label="github link">github.com/tajsandhu</a>
                         </div>
                     </div>
                 </section>
-            </section>
-            <section id="about-section">
-                <div class="section-header">
-                    <h1><span>About</span></h1>
-                </div>
-                <img alt="Picture of Tajbir Sandhu" src="/pictures/ProfilePic.jpg"/>
-                <p>
-                    Hi, I'm Tajbir, I'm a Software Engineer. Problem solving and 
-                    technology have always been passions of mine, so programming 
-                    was a clear choice for me. I enjoy learning and always look 
-                    forward to new challenges, and pride myself in being a creative, 
-                    hard working, and social person.
-                    <br><br>
-                    I also believe that a well balanced life is worth striving
-                    for. In my spare time, I like to work out, go on hikes, play 
-                    guitar, and watch sports.
-                </p>
-            </section>
-            <section id="contact-section">
-                <div class="section-header">
-                    <h1><span>Contact</span></h1>
-                </div>
-                <div>
-                    <div class="contact">
-                    	<label for="email-address">Email</label>
-                    	<a href="mailto: sandhu_tajbir@outlook.com" id="email-address" aria-label="email link">sandhu_tajbir@outlook.com</a>
-                    </div>
-                    <div class="contact">
-                        <label for="phone-number">Phone</label>
-                        <a href="tel:+1-209-602-2444" id="phone-number" aria-label="phone link">209-602-2444</a>
-                    </div>
-                    <div class="contact">
-                        <label for="linkedin-link">LinkedIn</label>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/tajbirsandhu/" id="linkedin-link" aria-label="linkedin link">linkedin.com/in/tajbirsandhu</a>
-                    </div>
-                    <div class="contact">
-                        <label for="github-link">GitHub</label>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/tajsandhu" id="github-link" aria-label="github link">github.com/tajsandhu</a>
-                    </div>
-                </div>
-            </section>
-        </section>
+            </div>
+        </div>
     </body>
 </html>
