@@ -1,30 +1,35 @@
+// variables containing dom elements
 var menuButton = document.body.querySelector(".mobile-menu-button");
 var siteCanvas = document.body.querySelector(".site");
+var mainContent = document.body.querySelector(".content-wrapper");
 
-siteCanvas.classList.remove("reveal-menu");
+
+siteCanvas.classList.add("hide-menu");
 menuButton.classList.remove("shift-button");
 
+function hideSideBar() { 
+    siteCanvas.classList.add("hide-menu");
+    menuButton.classList.remove("shift-button");
+}
+
+function showSideBar() {
+    siteCanvas.classList.remove("hide-menu");
+    menuButton.classList.add("shift-button");
+}
+
+// listens to the 
 menuButton.addEventListener("click", () => {
     siteCanvas.style.transition = "left .7s ease";
     menuButton.style.transition = "right .7s ease";
-    if (siteCanvas.classList.contains("reveal-menu") == true) {  
-        let completed = true;  
-        menuButton.classList.remove("shift-button");
-        siteCanvas.classList.remove("reveal-menu");
-        siteCanvas.ontransitioncancel = () => {
-            completed = false;
-        };
-        siteCanvas.ontransitionend = () => {
-            if (completed == true) {
-                siteCanvas.style.overflowX = "hidden";
-            }
-        };
-        siteCanvas.ontransitionend = () => {
-
-        };
+    if (siteCanvas.classList.contains("hide-menu") == true) { 
+        showSideBar();
     } else {
-        siteCanvas.style.overflowX = "initial";
-        siteCanvas.classList.add("reveal-menu");
-        menuButton.classList.add("shift-button");
+        hideSideBar();
     }
+});
+
+mainContent.addEventListener("click", () => {
+    if (siteCanvas.classList.contains("hide-menu") == false) {
+        hideSideBar();
+    }    
 });

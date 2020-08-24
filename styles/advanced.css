@@ -62,12 +62,18 @@
             font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
             height: 100vh;
             position: relative;
-            overflow-x: hidden;
-            left: 0;
+            overflow-x: initial;
+            left: -250px;
         }
 
-        .reveal-menu {
-            left: -250px;
+        .hide-menu {
+            left: 0;
+            overflow-x: hidden;
+            animation: 2s delay-overflow;
+        }
+
+        @keyframes delay-overflow {
+            from { overflow-x: initial; }
         }
     }
 
@@ -93,6 +99,7 @@
         right: 0;
     }
 
+    
     .shift-button {
         right: -250px;
     }
