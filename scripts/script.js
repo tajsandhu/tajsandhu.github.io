@@ -15,9 +15,13 @@ menuButton.addEventListener("click", () => {
             completed = false;
         };
         siteCanvas.ontransitionend = () => {
-            if (completed == true)
+            if (completed == true) {
                 siteCanvas.style.overflowX = "hidden";
-        }
+            }
+        };
+        siteCanvas.ontransitionend = () => {
+
+        };
     } else {
         siteCanvas.style.overflowX = "initial";
         siteCanvas.classList.add("reveal-menu");
