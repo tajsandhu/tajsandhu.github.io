@@ -2,10 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* styling for browsers that support modern CSS grid */
 
-
-@supports(display: grid) {
+@supports(grid-template-columns: auto) {
     
+    /* basic styling which carries over to most of the small and large screen versions of the site */
+   
     h1 {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 500;
@@ -51,8 +53,12 @@
         line-height: 1.5;
     }
 
-    @media screen and (max-width: 614px)
+    /* styling for small screen version of app */
+
+    @media screen and (max-width: 600px)
     {
+        /* sets up mobile grid */
+
         .site {
             display: grid;
             grid-template-areas: 
@@ -77,6 +83,8 @@
         }
     }
 
+    /* styling for header */
+
     .site-header {
         grid-area: header;
         background-color: black;
@@ -84,9 +92,13 @@
         height: 45px;
     }
 
+    /* hides large screen menu */
+
     .site-header nav {
         display: none;
     }
+
+    /* mobile menu styling */
 
     .mobile-menu-button {
         display: flex;
@@ -103,6 +115,8 @@
     .shift-button {
         right: -250px;
     }
+
+    /* mobile sidebar */
 
     .sidebar {
         grid-area: sidebar;
@@ -123,6 +137,8 @@
         text-decoration: none;
         color: white;
     }
+
+    /* main content section of page */
 
     .content-wrapper {
         grid-area: main;
@@ -181,7 +197,9 @@
         display: block;
     }
 
-    @media screen and (min-width: 615px) {
+    /* styling for large screen version of website app */
+
+    @media screen and (min-width: 600px) {
         body {
             overflow: initial;
             font-size: 20px;
@@ -190,6 +208,8 @@
         .site {
             display: inline-block;
         }
+
+        /* large screen header */
 
         .sidebar {
             display: none;
@@ -202,6 +222,8 @@
             align-items: center;
             z-index: 5;
         }
+
+        /* large screen navigation */
 
         .site-header nav {
             display: initial;
@@ -227,9 +249,13 @@
             text-decoration: underline;
         }
 
+        /* hide mobile menu button */
+
         .mobile-menu-button {
             display: none;
         }
+
+        /* sets up desktop grid */
         
         .content-wrapper {
             overflow: auto;
