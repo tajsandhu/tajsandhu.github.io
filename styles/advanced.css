@@ -74,12 +74,6 @@
 
         .hide-menu {
             left: 0;
-            overflow-x: hidden;
-            animation: 2s delay-overflow;
-        }
-
-        @keyframes delay-overflow {
-            from { overflow-x: initial; }
         }
     }
 
